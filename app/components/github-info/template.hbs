@@ -1,0 +1,15 @@
+<form {{action this.transitionToUser  on="submit" }}>
+  <div>
+    <label>User: </label>
+    <Input oninput={{action this.setUser}}/>
+  </div>
+
+  <div>
+    <label>Api key:</label>
+    <Input oninput={{action this.setApiKey}}/>
+  </div>
+
+  <div>
+    <input type="submit" value="Go to User" >
+  </div>
+</form>

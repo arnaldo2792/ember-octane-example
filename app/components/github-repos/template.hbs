@@ -1,0 +1,20 @@
+<div
+  {{did-insert this.getRepos}}
+  {{did-update this.getRepos @user}}
+>
+  {{#if this.error}}
+    <h2>{{this.error}}</h2>
+  {{else}}
+    <h2>Repos:</h2>
+    <ul>
+      {{#each this.repos as |repo|}}
+        <li>
+          <LinkTo @route="github.user.repo" @model={{repo.name}}>
+            {{repo.name}}
+          </LinkTo>
+        </li>
+      {{/each}}
+    </ul>
+  {{/if}}
+
+</div>

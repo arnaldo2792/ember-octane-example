@@ -1,0 +1,12 @@
+<div 
+  {{did-insert this.getUser}}
+  {{did-update this.getUser @user}}
+  >
+  
+  {{#if this.error}}
+    <h1>{{this.error}}</h1>
+  {{else}}
+    <h1>{{this.name}}</h1>
+  {{/if}}
+
+</div>

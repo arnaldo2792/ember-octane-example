@@ -1,0 +1,7 @@
+<Providers::Github as |api|>
+  <GithubUser @getUser={{action api.getUser}} @user={{this.model}}/>
+
+  <GithubRepos @getRepos={{action api.getRepos}} @user={{this.model}}/>
+</Providers::Github>
+
+{{outlet}}

@@ -6,6 +6,12 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {});
+Router.map(function() {
+  this.route('github', {path: '/'}, function() {
+    this.route('user', {path: '/u/:user'}, function() {
+      this.route('repo', {path: '/r/:repo'});
+    });
+  });
+});
 
 export default Router;

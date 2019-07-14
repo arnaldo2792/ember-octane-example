@@ -1,0 +1,15 @@
+<div
+  {{did-insert this.getRepo}}
+  {{did-update this.getRepo @model}}
+>
+
+  {{#if this.error}}
+    <h3>{{this.error}}</h3>
+  {{else}}
+    <h3>{{this.repo.name}}</h3>
+    <div>
+      <label>Language:</label> {{this.repo.language}}
+    </div>
+  {{/if}}
+
+</div>
